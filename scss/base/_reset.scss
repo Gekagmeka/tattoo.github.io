@@ -5,7 +5,11 @@ html {
 	box-sizing: inherit;
 }
 
-* {max-height: 1000000px;}
+* {
+	padding:0;
+	margin:0;
+	max-height: 1000000px;
+}
 
 body {
 	color: $base-text-color;
