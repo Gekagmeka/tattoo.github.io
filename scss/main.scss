@@ -47,20 +47,23 @@ body{
 			}
 			@include media ('<600px') {
 				padding-bottom:33.3333%;
+				margin:40px 0 0;
 			}
-			// &:before{
-			// 	content:'';
-			// 	position:fixed;
-			// 	top:0;
-			// 	left:0;
-			// 	width:100%;
-			// 	height:120px;
-			// 	background-color:#ccc;
-			// 	opacity:0;
-			// 	@include media ('<=768px') {
-			// 		opacity:1;
-			// 	}
-			// }
+			&:before{
+				content:'';
+				position:fixed;
+				z-index:3;
+				top:0;
+				left:0;
+				width:100%;
+				height:20px;
+				background-color:#000001;
+				opacity:0;
+				@include media ('<600px') {
+					height:40px;
+					opacity:1;
+				}
+			}
 			.header__content{
 				width:100%;
 				height:500px;
@@ -68,6 +71,8 @@ body{
 					height:auto;
 				}
 				.header__nav{
+					position:relative;
+					z-index:2;
 					@include media ('<600px') {
 						position:fixed;
 						top:-100%;
@@ -86,15 +91,21 @@ body{
 						justify-content:center;
 						align-items:center;
 						padding:25px 20px;
+						position:relative;
+						z-index:3;
 						@include media ('<600px') {
-							display:block;
-							padding:100px 0 0;
+							flex-direction:column;
+							padding:100px 20px 50px;
 						}
 						.header__item{
 							list-style-type:none;
 							margin:0 15px;
 							@include media ('<768px') {
 									margin:0 10px;
+								}
+								@include media ('<600px') {
+									order:1;
+									margin-bottom:10px;
 								}
 							&:nth-child(4){
 								margin:0 40px;
@@ -105,16 +116,25 @@ body{
 									margin:0 15px;
 								}
 								@include media ('<600px') {
-									display:none;
+									order:0;
+									margin-bottom:15px;
 								}
 							}
 							.header__link{
 								text-decoration:none;
 								font:13px/16px Times New Roman, Times, serif; color:#000; text-transform:uppercase;
+								@include media ('<600px') {
+									font-size:24px;
+									line-height:28px;
+									font-weight:700;
+								}
 								.header__logo{
 									display:block;
 									width:100%;
 									max-width:260px;
+									@include media ('<600px') {
+										width:180px;
+									}
 								}
 							}
 						}
@@ -122,17 +142,17 @@ body{
 				}
 				.header__burger{
 					display:none;
-					width:40px;
-					height:25px;
+					width:20px;
+					height:20px;
 					position:relative;
 					z-index:5;
 					overflow:hidden;
 					@include media ('<600px') {
 						display:block;
 						position:fixed;
-						top:28px;
+						top:10px;
 						right:10px;
-						background-color:#f00;
+						background-color:#f2efe6;
 					}
 				}
 			}
