@@ -526,7 +526,6 @@ body {
   margin: 0 auto; }
 
 .container {
-  max-width: 1500px;
   width: 100%;
   margin: 0 auto; }
 
@@ -714,7 +713,7 @@ body {
     .about-us__left-column {
       padding-top: 66%;
       background-size: 100% auto; } }
-  .about-us__left-column .left-column__button {
+  .about-us__left-column .about-us__button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -734,13 +733,13 @@ body {
   @media (max-width: 768px) {
     .about-us__right-column {
       padding: 10% 5% 8%; } }
-  .about-us__right-column .right-column__ico {
+  .about-us__right-column .about-us__ico {
     text-align: center;
     padding-bottom: 28px; }
     @media (max-width: 1023px) {
-      .about-us__right-column .right-column__ico {
+      .about-us__right-column .about-us__ico {
         padding-bottom: 20px; } }
-  .about-us__right-column .right-column__subtitle {
+  .about-us__right-column .about-us__subtitle {
     text-align: center;
     padding: 0 0 20px; }
 /*# sourceMappingURL=main.css.map */

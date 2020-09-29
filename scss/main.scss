@@ -39,7 +39,6 @@ body{
 	margin:0 auto;
 }
 .container{
-	max-width:1500px;
 	width:100%;
 	margin:0 auto;
 }
@@ -220,7 +219,7 @@ body{
 		padding-top:66%;
 		background-size:100% auto;
 	}
-	.left-column__button{
+	.about-us__button{
 		position:absolute;
 		top:50%;
 		left:50%;
@@ -239,14 +238,14 @@ body{
 	@include media ('<=768px') {
 		padding:10% 5% 8%;
 	}
-	.right-column__ico{
+	.about-us__ico{
 		text-align:center;
 		padding-bottom:28px;
 		@include media ('<1024px') {
 			padding-bottom:20px;
 		}
 	}
-	.right-column__subtitle{
+	.about-us__subtitle{
 		text-align:center;
 		padding:0 0 20px;
 	}
