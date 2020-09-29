@@ -18,7 +18,7 @@ $base-text-color: $black !default;
 $base-background-color: $white !default;
 $font-size-base: 16px !default;
 $line-height-base: 1.2 !default;
-$base-font-family: $base-font-sans-serif !default;
+$base-font-family: $base-font-serif !default;
 
 $vertical-rhythm: ($line-height-base * 1em);
 
@@ -31,7 +31,7 @@ $base-link-color: $light-blue;
 $btn-color: $white !default;
 $btn-background: $black !default;
 $btn-padding: 0.4em 0.7em !default;
-$btn-font-size: inherit !default;
+$btn-font-size: 36px !default;
 
 // Forms
 $form-element-padding: $btn-padding !default;

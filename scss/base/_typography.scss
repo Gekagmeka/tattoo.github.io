@@ -48,3 +48,10 @@ a {
 		text-decoration: none;
 	}
 }
+
+.button {
+	font-size:$btn-font-size;
+	font-family:$base-font-serif;
+	font-weight:700;
+	text-transform:uppercase;
+}
