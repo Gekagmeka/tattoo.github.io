@@ -189,6 +189,7 @@ body{
 	// end header
 
 	// start main
+	// about-us
 .about-us__info{
 	display:flex;
 	justify-content:space-between;
@@ -250,4 +251,28 @@ body{
 		padding:0 0 20px;
 	}
 }
+
+
+.gallery{
+	display:flex;
+	flex-wrap:wrap;
+	.gallery__item{
+		width:16.6667%;
+		@include media ('<=768px') {
+			width:25%;
+		}
+		@include media ('<=480px') {
+			width:50%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 	// end main}}

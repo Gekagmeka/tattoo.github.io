@@ -396,6 +396,12 @@ button {
   border: none;
   background: none; }
 
+ul {
+  font-size: 0; }
+
+li {
+  list-style-type: none; }
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -742,4 +748,19 @@ body {
   .about-us__right-column .about-us__subtitle {
     text-align: center;
     padding: 0 0 20px; }
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .gallery .gallery__item {
+    width: 16.6667%; }
+    @media (max-width: 768px) {
+      .gallery .gallery__item {
+        width: 25%; } }
+    @media (max-width: 480px) {
+      .gallery .gallery__item {
+        width: 50%; } }
 /*# sourceMappingURL=main.css.map */
