@@ -763,4 +763,86 @@ body {
     @media (max-width: 480px) {
       .gallery .gallery__item {
         width: 50%; } }
+
+.quote {
+  background-image: url("../sourceimages/bg-03.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 350px;
+  position: relative; }
+
+.quote__content {
+  max-width: 900px;
+  width: 90%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  @media (max-width: 480px) {
+    .quote__content {
+      top: 60%; } }
+
+figure blockquote {
+  padding-bottom: 43px; }
+  @media (max-width: 480px) {
+    figure blockquote {
+      padding-bottom: 20px; } }
+  figure blockquote .quote__text {
+    text-align: center;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 10px;
+    position: relative; }
+    @media (max-width: 480px) {
+      figure blockquote .quote__text {
+        font-size: 22px;
+        line-height: 28px; } }
+    @media (max-width: 374px) {
+      figure blockquote .quote__text {
+        font-size: 20px;
+        line-height: 26px; } }
+    figure blockquote .quote__text::before {
+      content: open-quote;
+      font-size: 110px;
+      position: absolute;
+      top: -18px;
+      left: -55px; }
+      @media (max-width: 480px) {
+        figure blockquote .quote__text::before {
+          font-size: 90px;
+          top: -15px; } }
+      @media (max-width: 374px) {
+        figure blockquote .quote__text::before {
+          font-size: 70px;
+          top: -10px; } }
+    figure blockquote .quote__text::after {
+      content: close-quote;
+      font-size: 110px;
+      position: absolute;
+      bottom: -54px;
+      right: -35px; }
+      @media (max-width: 480px) {
+        figure blockquote .quote__text::after {
+          font-size: 90px;
+          bottom: -40px; } }
+      @media (max-width: 374px) {
+        figure blockquote .quote__text::after {
+          font-size: 70px;
+          bottom: -30px; } }
+
+figure .quote__sign {
+  text-align: right;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 10px 10px; }
+  @media (max-width: 374px) {
+    figure .quote__sign {
+      font-size: 13px; } }
 /*# sourceMappingURL=main.css.map */
