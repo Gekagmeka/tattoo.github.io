@@ -30,6 +30,27 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
+%info-of-master{
+	background-color: $marsh;
+		padding: 30px 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include media ('<1280px') {
+			padding: 20px 40px;
+		}
+		@include media ('<1200px') {
+			padding: 20px 30px;
+		}
+		@include media ('<1024px') {
+			padding: 60px 85px;
+		}
+		@include media ('<=768px') {
+			padding: 50px 5%;
+		}
+}
+
 body{
 	background-color:#000001;
 	&.locked{
@@ -65,6 +86,20 @@ body{
 		width:70%;
 	}
 }
+.form{
+	.input{
+		display: inline-block;
+		width: 100%;
+			&[value],
+			&::placeholder{
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: 0.3px;
+				color: #afaca5;
+				text-transform: uppercase;
+			}
+	}
+ }
 
 	// start header
 .header{
@@ -231,7 +266,7 @@ body{
 	}
 }
 .about-us__right-column{
-	background-color:#f2efe6;
+	background-color: $light-marsh;
 	padding:6% 8% 5% 6%;
 	@include media ('<1024px') {
 		padding:4% 6% 3% 4%;
@@ -358,7 +393,89 @@ figure{
 }
 
 //team
-.three-columns{
+.column{
+	width: 33.333333%;
+
+	&:not(last-child) {
+		@include media ('<1024px') {
+			width:50%;
+		}
+		@include media ('<=480px') {
+			width:100%;
+		}
+	}
+	&:last-child {
+		@include media ('<1024px') {
+			width:100%;
+		}
+	}
+}
+.master__name{
+	text-align: center;
+	padding-bottom: 32px;
+	
+	@include media ('<1280px') {
+		padding-bottom: 15px;
+	}
+}
+.master__info{
+	font-family: $base-font-sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	padding-bottom: 26px;
+	
+	@include media ('<1280px') {
+		padding-bottom: 15px;
+	}
+}
+.list{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+	@include media ('<1024px') {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.list__item{
+		@include media ('<1024px') {
+			margin: 0 15px;
+		}
+		@include media ('<600px') {
+			margin: 0 10px;
+		}
+		@include media ('<=375px') {
+			margin: 0 5px;
+		}
+		.ico-facebook{
+			width: 34px;
+			height: 36px;
+			transition:all 0.3s ease-in;
+			
+			@include media ('<1200px') {
+				width: 30px;
+				height: 32px;
+			}
+				&:hover{
+					fill:#00cae5;
+				}
+		}
+		.ico-twitter{
+			width: 32px;
+			height: 32px;
+			transition:all 0.3s ease-in;
+			
+			@include media ('<1200px') {
+				width: 28px;
+				height: 28px;
+			}
+				&:hover{
+					fill:#00cae5;
+				}
+		}
+	}
+}
+.first-three-columns{
 	display: flex;
 	justify-content: space-between;
 	@include media ('<1024px') {
@@ -398,108 +515,114 @@ figure{
 		}
 	}
 	.rightside{
-		background-color: $marsh;
-		padding: 30px 50px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		@include media ('<1280px') {
-			padding: 20px 40px;
+		@extend %info-of-master;
+	}
+}
+//first-row
+// second-row
+.second-three-columns{
+	display: flex;
+	justify-content: space-between;
+	@include media ('<1024px') {
+		flex-wrap: wrap;
+	}
+	.leftside{
+		img{
+			width: 100%;
 		}
-		@include media ('<1200px') {
-			padding: 20px 30px;
-		}
+	}
+	.middle{
+		@extend %info-of-master;
+		position: relative;
 		@include media ('<1024px') {
-			padding: 60px 85px;
+			order: 2;
+			flex: 1;
+		}
+			&::before{
+				content: '';
+				position: absolute;
+				top: 22%;
+				left: -25px;
+				// left arrow
+				border-right: 25px solid $marsh;
+				border-top: 15px solid transparent;
+				border-bottom: 15px solid transparent;
+				@include media ('<1024px') {
+					left: 10%;
+					top: -25px;
+					border-top: none;
+					border-bottom: 25px solid #cec8b5;
+					border-right: 15px solid transparent;
+					border-left: 15px solid transparent;
+				}
+				@include media ('<=480px') {
+					width: 0;
+					height: 0;
+					display: none;
+				}
+			}
+		}
+	.rightside{
+		@extend %info-of-master;
+		background-color: $light-marsh;
+		@include media ('<1024px') {
+			width: 50%;
 		}
 		@include media ('<=768px') {
-			padding: 50px 5%;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
-		.master__name{
-			text-align: center;
-			padding-bottom: 32px;
-			
-			@include media ('<1280px') {
-				padding-bottom: 15px;
-			}
+		@include media ('<=480px') {
+			order: 3;
+			flex: 1;
+			padding-top: 50px;
+			padding-bottom: 50px;
 		}
-		.master__info{
-			font-family: $base-font-sans-serif;
+		.rightside__title{
 			font-size: 14px;
-			line-height: 1.2;
-			padding-bottom: 26px;
-			
-			@include media ('<1280px') {
-				padding-bottom: 15px;
+			letter-spacing: -0.3px;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		.rightside__text{
+			font-size: 13px;
+			line-height: 1;
+			letter-spacing: -0.5px;
+			text-transform: uppercase;
+			padding-bottom: 40px;
+			margin: 0;
+			@include media ('<1200px') {
+				padding-bottom: 25px;
+			}
+			@include media ('<=768px') {
+				padding-bottom: 20px;
 			}
 		}
-	}
-	.column{
-		width: 33.3333%;
+		.rightside__form{
+			.rightside__email,
+			.rightside__submit{
+				height: 40px;
+				padding: 5px 20px;
+			}
+			.rightside__email{
+				margin-bottom: 20px;
+			}
+			.rightside__submit{
+				background-color: $dark-marsh;
+				color: $white;
+				transition: all 0.3s ease-in;
+				&:hover{
+					opacity: 0.9;
+				}
+			}
+		}
+	}	
+}
 
-		&:not(last-child) {
-			@include media ('<1024px') {
-				width:50%;
-			}
-			@include media ('<=480px') {
-				width:100%;
-			}
-		}
-		&:last-child {
-			@include media ('<1024px') {
-				width:100%;
-			}
-		}
-	}
-}
-.list{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+
+
 	
-	@include media ('<1024px') {
-		max-width: 400px;
-		margin: 0 auto;
-	}
-	.list__item{
-		@include media ('<1024px') {
-			margin: 0 15px;
-		}
-		@include media ('<600px') {
-			margin: 0 10px;
-		}
-		@include media ('<=375px') {
-			margin: 0 5px;
-		}
-		.ico-facebook{
-			width: 34px;
-			height: 36px;
-			transition:all 0.3s ease-in;
-			
-			@include media ('<1200px') {
-				width: 30px;
-				height: 32px;
-			}
-				&:hover{
-					fill:#555;
-				}
-		}
-		.ico-twitter{
-			width: 32px;
-			height: 32px;
-			transition:all 0.3s ease-in;
-			
-			@include media ('<1200px') {
-				width: 28px;
-				height: 28px;
-			}
-				&:hover{
-					fill:#555;
-				}
-		}
-	}
-}
+
 
 
 
