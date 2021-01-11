@@ -452,29 +452,34 @@ figure{
 			height: 36px;
 			transition:all 0.3s ease-in;
 			
+			@include media ('>=1024px') {
+				&:hover{
+					fill:#00cae5;
+				}
+			}
 			@include media ('<1200px') {
 				width: 30px;
 				height: 32px;
 			}
-				&:hover{
-					fill:#00cae5;
-				}
 		}
 		.ico-twitter{
 			width: 32px;
 			height: 32px;
 			transition:all 0.3s ease-in;
 			
+			@include media ('>=1024px') {
+				&:hover{
+					fill:#00cae5;
+				}
+			}
 			@include media ('<1200px') {
 				width: 28px;
 				height: 28px;
 			}
-				&:hover{
-					fill:#00cae5;
-				}
 		}
 	}
 }
+//first-row
 .first-three-columns{
 	display: flex;
 	justify-content: space-between;
@@ -518,7 +523,6 @@ figure{
 		@extend %info-of-master;
 	}
 }
-//first-row
 // second-row
 .second-three-columns{
 	display: flex;
@@ -619,7 +623,76 @@ figure{
 	}	
 }
 
+//twitter-block
+.tw-block {
+	background-image: url("../sourceimages/bg-05.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 350px;
+	background-size: cover;
+	display: flex;
+	align-items: center;
 
+	@include media ('<1200px') {
+		min-height: 300px;
+	}
+	@include media ('<1024px') {
+		min-height: 250px;
+	}
+	@include media ('<=768px') {
+		min-height: 200px;
+	}
+	@include media ('<=600px') {
+		height: auto;
+	}
+	.tw-block__content {	
+		max-width: 900px;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		@include media ('<=600px') {
+			padding: 40px 0 20px;
+		}
+
+		.ico-twitter {
+			width: 50px;
+			height: 50px;
+			fill: $marsh;
+			transition: all 0.3s ease-in;
+			
+			@include media ('>=1024px') {
+				&:hover{
+					fill:#00cae5;
+				}
+			}
+			@include media ('<=768px') {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.tw-block__text {
+			padding: 20px 0;
+			font-style: italic;
+			font-size: 24px;
+			line-height: 30px;
+			font-weight: 700;
+			color: $light-marsh;
+			text-align: left;
+			margin: 0;
+			@include media ('<=768px') {
+				padding: 10px 0;
+				font-size: 22px;
+				line-height: 28px;
+			}
+			@include media ('<=374px') {
+				font-size: 20px;
+				line-height: 26px;
+			}
+		}
+
+	}
+}
 
 	
 
