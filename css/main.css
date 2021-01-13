@@ -1177,19 +1177,24 @@ figure .quote__sign {
       flex-basis: 20%;
   position: relative; }
   .block-two__gallery .block-two__item::after {
-    content: '';
+    content: ' ';
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: #cec8b5;
+    background-color: #a59f85;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
+    @media (max-width: 1023px) {
+      .block-two__gallery .block-two__item::after {
+        display: none; } }
   .block-two__gallery .block-two__item .block-two__icon {
     opacity: 0;
     visibility: hidden;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1198,10 +1203,37 @@ figure .quote__sign {
             transform: translate(-50%, -50%);
     text-align: center;
     -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in; }
-  .block-two__gallery .block-two__item:hover::after {
-    opacity: 0.4; }
-  .block-two__gallery .block-two__item:hover .block-two__icon {
-    opacity: 1;
-    visibility: visible; }
+    transition: all 0.3s ease-in;
+    z-index: 3; }
+    .block-two__gallery .block-two__item .block-two__icon p {
+      padding-bottom: 30px; }
+    .block-two__gallery .block-two__item .block-two__icon a {
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 20px;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; }
+      @media (min-width: 1024px) {
+        .block-two__gallery .block-two__item .block-two__icon a:hover {
+          -webkit-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+                  transform: scale(1.1); } }
+      @media (max-width: 1200px) {
+        .block-two__gallery .block-two__item .block-two__icon a {
+          margin-left: 15px;
+          margin-right: 15px; } }
+  @media (min-width: 1024px) {
+    .block-two__gallery .block-two__item:hover::after {
+      opacity: 0.6; }
+    .block-two__gallery .block-two__item:hover .block-two__icon {
+      opacity: 1;
+      visibility: visible; } }
+  @media (max-width: 768px) {
+    .block-two__gallery .block-two__item {
+      -ms-flex-preferred-size: 33.333333%;
+          flex-basis: 33.333333%; } }
+  @media (max-width: 480px) {
+    .block-two__gallery .block-two__item {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; } }
 /*# sourceMappingURL=main.css.map */
