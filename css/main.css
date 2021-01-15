@@ -1236,4 +1236,101 @@ figure .quote__sign {
     .block-two__gallery .block-two__item {
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%; } }
+
+.contact {
+  background-color: #e4dcc3;
+  padding: 150px 0; }
+  @media (max-width: 768px) {
+    .contact {
+      padding: 100px 0; } }
+  @media (max-width: 599px) {
+    .contact {
+      padding: 60px 0; } }
+
+.contact__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 1200px) {
+    .contact__content {
+      width: 94%; } }
+  .contact__content .contact__left .contact__button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px; }
+    @media (max-width: 768px) {
+      .contact__content .contact__left .contact__button {
+        margin-bottom: 30px; } }
+  .contact__content .contact__left .contact__text {
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 60px;
+    font-size: 18px; }
+    @media (max-width: 1023px) {
+      .contact__content .contact__left .contact__text {
+        padding: 0 20px; } }
+    @media (max-width: 768px) {
+      .contact__content .contact__left .contact__text {
+        margin-bottom: 30px; } }
+  .contact__content .contact__left .contact__social {
+    max-width: 400px;
+    margin: 0 auto; }
+  .contact__content .contact__right {
+    padding-left: 100px; }
+    @media (max-width: 1200px) {
+      .contact__content .contact__right {
+        padding-left: 70px; } }
+    @media (max-width: 1023px) {
+      .contact__content .contact__right {
+        padding-left: 50px; } }
+    @media (max-width: 768px) {
+      .contact__content .contact__right {
+        display: none; } }
+
+.contact__schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px; }
+  @media (max-width: 1023px) {
+    .contact__schedule {
+      display: block; } }
+  @media (max-width: 768px) {
+    .contact__schedule {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 40px; } }
+  @media (max-width: 599px) {
+    .contact__schedule {
+      display: block;
+      margin-bottom: 20px; } }
+  .contact__schedule .schedule__left,
+  .contact__schedule .schedule__right {
+    padding-right: 30px; }
+    @media (max-width: 1023px) {
+      .contact__schedule .schedule__left,
+      .contact__schedule .schedule__right {
+        padding-right: 0;
+        padding-bottom: 30px; } }
+    @media (max-width: 599px) {
+      .contact__schedule .schedule__left,
+      .contact__schedule .schedule__right {
+        text-align: center; } }
+    .contact__schedule .schedule__left .schedule__item,
+    .contact__schedule .schedule__right .schedule__item {
+      font-size: 15px;
+      font-weight: 700; }
+      .contact__schedule .schedule__left .schedule__item span,
+      .contact__schedule .schedule__right .schedule__item span {
+        font-weight: 400; }
+      .contact__schedule .schedule__left .schedule__item a,
+      .contact__schedule .schedule__right .schedule__item a {
+        text-decoration: none;
+        color: #333; }
+        .contact__schedule .schedule__left .schedule__item a:hover,
+        .contact__schedule .schedule__right .schedule__item a:hover {
+          text-decoration: underline; }
 /*# sourceMappingURL=main.css.map */
