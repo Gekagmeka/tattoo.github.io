@@ -395,7 +395,11 @@ img {
 button,
 input {
   border: none;
-  background: none; }
+  background: none;
+  outline: 0; }
+
+textarea {
+  outline: 0; }
 
 ul {
   font-size: 0; }
@@ -462,7 +466,7 @@ textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   box-sizing: border-box;
-  border: 1px solid #999;
+  border: 2px solid #333;
   padding: 0.4em 0.7em; }
   input[type='text']:focus,
   input[type='tel']:focus,
@@ -512,7 +516,7 @@ select {
   -webkit-border-radius: 0; }
 
 textarea {
-  resize: vertical;
+  resize: none;
   vertical-align: top; }
 
 button,
@@ -1097,7 +1101,8 @@ figure .quote__sign {
     .second-three-columns .rightside .rightside__form .rightside__email,
     .second-three-columns .rightside .rightside__form .rightside__submit {
       height: 40px;
-      padding: 5px 20px; }
+      padding: 5px 20px;
+      border-width: 1px; }
     .second-three-columns .rightside .rightside__form .rightside__email {
       margin-bottom: 20px; }
     .second-three-columns .rightside .rightside__form .rightside__submit {
@@ -1238,7 +1243,7 @@ figure .quote__sign {
           flex-basis: 50%; } }
 
 .contact {
-  background-color: #e4dcc3;
+  background-color: #fbf2d7;
   padding: 150px 0; }
   @media (max-width: 768px) {
     .contact {
@@ -1256,6 +1261,12 @@ figure .quote__sign {
   @media (max-width: 1200px) {
     .contact__content {
       width: 94%; } }
+  @media (max-width: 1024px) {
+    .contact__content .contact__left.left-column {
+      width: 60%; } }
+  @media (max-width: 768px) {
+    .contact__content .contact__left.left-column {
+      width: 100%; } }
   .contact__content .contact__left .contact__button {
     display: block;
     margin: 0 auto;
@@ -1279,15 +1290,43 @@ figure .quote__sign {
     margin: 0 auto; }
   .contact__content .contact__right {
     padding-left: 100px; }
+    @media (max-width: 1024px) {
+      .contact__content .contact__right.right-column {
+        width: 40%; } }
     @media (max-width: 1200px) {
       .contact__content .contact__right {
         padding-left: 70px; } }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       .contact__content .contact__right {
-        padding-left: 50px; } }
+        padding-left: 30px; } }
     @media (max-width: 768px) {
       .contact__content .contact__right {
         display: none; } }
+    .contact__content .contact__right .contact__form {
+      font-size: 13px; }
+      .contact__content .contact__right .contact__form .contact__input {
+        padding: 20px 15px;
+        border: 2px solid #000;
+        margin-bottom: 50px; }
+      .contact__content .contact__right .contact__form .contact__textarea {
+        display: block;
+        width: 100%;
+        height: 210px;
+        padding: 20px 15px;
+        margin-bottom: 30px;
+        background-color: transparent; }
+      .contact__content .contact__right .contact__form .contact__submit {
+        width: 100%;
+        max-width: 400px;
+        padding: 18px 15px;
+        background-color: #9c9681;
+        color: #fff;
+        font-weight: 700;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        @media (min-width: 1024px) {
+          .contact__content .contact__right .contact__form .contact__submit:hover {
+            opacity: 0.9; } }
 
 .contact__schedule {
   display: -webkit-box;
@@ -1296,7 +1335,8 @@ figure .quote__sign {
   margin-bottom: 100px; }
   @media (max-width: 1023px) {
     .contact__schedule {
-      display: block; } }
+      display: block;
+      margin-bottom: 30px; } }
   @media (max-width: 768px) {
     .contact__schedule {
       display: -webkit-box;
@@ -1309,7 +1349,7 @@ figure .quote__sign {
       margin-bottom: 20px; } }
   .contact__schedule .schedule__left,
   .contact__schedule .schedule__right {
-    padding-right: 30px; }
+    padding-right: 20px; }
     @media (max-width: 1023px) {
       .contact__schedule .schedule__left,
       .contact__schedule .schedule__right {
@@ -1330,7 +1370,8 @@ figure .quote__sign {
       .contact__schedule .schedule__right .schedule__item a {
         text-decoration: none;
         color: #333; }
-        .contact__schedule .schedule__left .schedule__item a:hover,
-        .contact__schedule .schedule__right .schedule__item a:hover {
-          text-decoration: underline; }
+        @media (min-width: 1024px) {
+          .contact__schedule .schedule__left .schedule__item a:hover,
+          .contact__schedule .schedule__right .schedule__item a:hover {
+            text-decoration: underline; } }
 /*# sourceMappingURL=main.css.map */

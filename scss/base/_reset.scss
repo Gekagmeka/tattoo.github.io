@@ -35,6 +35,11 @@ button,
 input{
 	border: none;
 	background: none;
+	outline: 0;
+}
+
+textarea {
+	outline: 0;
 }
 
 ul{

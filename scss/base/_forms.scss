@@ -17,7 +17,7 @@ textarea {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 	box-sizing: border-box;
-	border: 1px solid $form-element-border-color;
+	border:2px solid $black;
 	padding: $form-element-padding;
 
 	// &:hover {
@@ -38,7 +38,7 @@ select {
 }
 
 textarea {
-	resize: vertical;
+	resize: none;
 	vertical-align: top;
 }
 

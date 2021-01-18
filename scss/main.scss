@@ -607,6 +607,7 @@ figure{
 			.rightside__submit{
 				height: 40px;
 				padding: 5px 20px;
+				border-width: 1px;
 			}
 			.rightside__email{
 				margin-bottom: 20px;
@@ -778,7 +779,7 @@ figure{
 
 //contact
 .contact {
-	background-color: $middle-marsh;
+	background-color: $light-yellow;
 	padding: 150px 0;
 	@include media ('<=768px') {
 		padding: 100px 0;
@@ -798,6 +799,15 @@ figure{
 	}
 
 		.contact__left {
+			&.left-column {
+				@include media ('<=1024px') {
+					width: 60%;
+				}
+				@include media ('<=768px') {
+					width: 100%;
+				}
+			}
+
 			.contact__button {
 				display: block;
 				margin: 0 auto;
@@ -826,16 +836,57 @@ figure{
 
 		.contact__right {
 			padding-left: 100px;
+			&.right-column {
+				@include media ('<=1024px') {
+					width: 40%;
+				}
+			}
+
 			@include media ('<=1200px') {
 				padding-left: 70px;
 			}
-			@include media ('<1024px') {
-				padding-left: 50px;
+			@include media ('<=1024px') {
+				padding-left: 30px;
 			}
 			@include media ('<=768px') {
 				display: none; //тут нужно сделать форму по клику,
 				// которая появляется при нажатии на кнопку Contact US
 			}
+
+			.contact__form {
+				font-size: 13px;
+
+				.contact__input {
+					padding: 20px 15px;
+					border: 2px solid #000;
+					margin-bottom: 50px;
+				}
+	
+				.contact__textarea {
+					display: block;
+					width: 100%;
+					height: 210px;
+					padding: 20px 15px;
+					margin-bottom: 30px;
+					background-color: transparent;
+				}
+	
+				.contact__submit {
+					width: 100%;
+					max-width: 400px;
+					padding: 18px 15px;
+					background-color: $dark-marsh;
+					color: $white;
+					font-weight: 700;
+					transition: all 0.3s ease-in;
+					&:hover{
+						@include media ('>=1024px') {
+							opacity: 0.9;
+						}
+					}
+				}
+			}
+
 		}
 }
 
@@ -844,6 +895,7 @@ figure{
 	margin-bottom: 100px;
 	@include media ('<1024px') {
 		display: block;
+		margin-bottom: 30px;
 	}
 	@include media ('<=768px') {
 		display: flex;
@@ -855,7 +907,7 @@ figure{
 	}
 		.schedule__left,
 		.schedule__right {
-			padding-right: 30px;
+			padding-right: 20px;
 			@include media ('<1024px') {
 				padding-right: 0;
 				padding-bottom: 30px;
@@ -874,7 +926,9 @@ figure{
 					text-decoration: none;
 					color: $black;
 					&:hover {
-						text-decoration: underline;
+						@include media ('>=1024px') {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
