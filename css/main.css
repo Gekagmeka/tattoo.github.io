@@ -1288,11 +1288,19 @@ figure .quote__sign {
   .contact__content .contact__left .contact__social {
     max-width: 400px;
     margin: 0 auto; }
+  .contact__content .contact__left .leave__button {
+    display: none; }
+    @media (max-width: 768px) {
+      .contact__content .contact__left .leave__button {
+        display: block; } }
   .contact__content .contact__right {
     padding-left: 100px; }
     @media (max-width: 1024px) {
       .contact__content .contact__right.right-column {
         width: 40%; } }
+    @media (max-width: 768px) {
+      .contact__content .contact__right.right-column {
+        width: 100%; } }
     @media (max-width: 1200px) {
       .contact__content .contact__right {
         padding-left: 70px; } }
@@ -1301,7 +1309,36 @@ figure .quote__sign {
         padding-left: 30px; } }
     @media (max-width: 768px) {
       .contact__content .contact__right {
-        display: none; } }
+        padding-left: 0;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        .contact__content .contact__right.show {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          opacity: 1;
+          visibility: visible; }
+          .contact__content .contact__right.show .contact__form {
+            width: 95%;
+            max-width: 780px;
+            background-color: #fffffe;
+            margin: auto;
+            padding: 40px 25px;
+            border-radius: 5px; }
+            .contact__content .contact__right.show .contact__form .contact__input {
+              padding: 10px;
+              margin-bottom: 20px; } }
     .contact__content .contact__right .contact__form {
       font-size: 13px; }
       .contact__content .contact__right .contact__form .contact__input {
@@ -1374,4 +1411,39 @@ figure .quote__sign {
           .contact__schedule .schedule__left .schedule__item a:hover,
           .contact__schedule .schedule__right .schedule__item a:hover {
             text-decoration: underline; } }
+
+.location {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 0; }
+  .location iframe {
+    width: 100%;
+    height: 800px;
+    border: 0;
+    filter: grayscale(90%); }
+    @media (max-width: 1200px) {
+      .location iframe {
+        height: 600px; } }
+    @media (max-width: 1023px) {
+      .location iframe {
+        height: 500px; } }
+    @media (max-width: 768px) {
+      .location iframe {
+        height: 400px; } }
+
+.footer {
+  padding: 40px 15px;
+  background-color: #ccc; }
+  .footer .text {
+    text-align: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; }
+    .footer .text a {
+      font-weight: 700;
+      text-decoration: none;
+      color: inherit; }
+      .footer .text a:hover {
+        text-decoration: underline; }
 /*# sourceMappingURL=main.css.map */

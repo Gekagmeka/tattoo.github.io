@@ -832,15 +832,41 @@ figure{
 				max-width: 400px;
 				margin: 0 auto;
 			}
+			.leave__button {
+				display: none;
+				@include media ('<=768px') {
+					display: block;
+				}
+			}
 		}
 
 		.contact__right {
 			padding-left: 100px;
+			
 			&.right-column {
 				@include media ('<=1024px') {
 					width: 40%;
 				}
+				@include media ('<=768px') {
+					width: 100%;
+				}
 			}
+			// &.show {
+			// 	position:fixed;
+			// 	top:0;
+			// 	left:0;
+			// 	width:100%;
+			// 	height:100%;
+			// 	background-color:rgba(0,0,0,0.2);
+			// 	.contact__form {
+			// 		width:95%;
+			// 		max-width:780px;
+			// 		background-color:#fffffe;
+			// 		margin:auto;
+			// 		padding:40px 46px;
+			// 		border-radius:5px;
+			// 	}
+			// }
 
 			@include media ('<=1200px') {
 				padding-left: 70px;
@@ -849,8 +875,41 @@ figure{
 				padding-left: 30px;
 			}
 			@include media ('<=768px') {
-				display: none; //тут нужно сделать форму по клику,
+				padding-left: 0;
+
+				opacity: 0;
+				visibility: hidden;
+				position:fixed;
+				top:0;
+				left:0;
+				bottom: 0;
+				right: 0;
+				width:100%;
+				height:100%;
+				z-index: 10;
+				background-color:rgba(0,0,0,0.6);
+				transition: all 0.3s ease-in;
+				//display: none; //тут нужно сделать форму по клику,
 				// которая появляется при нажатии на кнопку Contact US
+				&.show {
+					display: flex;
+					opacity: 1;
+					visibility: visible;
+					
+					.contact__form {
+						width:95%;
+						max-width:780px;
+						background-color:#fffffe;
+						margin:auto;
+						padding:40px 25px;
+						border-radius:5px;
+						.contact__input {
+							padding: 10px;
+							margin-bottom: 20px;
+						}
+					}
+				}
+				
 			}
 
 			.contact__form {
@@ -936,9 +995,49 @@ figure{
 		}
 }
 
+//prefooter iframe
+.location {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 0;
+	line-height: 0;
 
+	iframe {
+		width: 100%;
+		height: 800px;
+		border: 0;
+		filter: grayscale(90%);
 
+		@include media ('<=1200px') {
+			height: 600px;
+		}
+		@include media ('<1024px') {
+			height: 500px;
+		}
+		@include media ('<=768px') {
+			height: 400px;
+		}
+	}
+}
 
+// end main}}
 
-
-	// end main}}
+//footer
+.footer {
+	padding: 40px 15px;
+	background-color: #ccc;
+	.text {
+		text-align: center;
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		a {
+			font-weight: 700;
+			text-decoration: none;
+			color: inherit;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

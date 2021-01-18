@@ -4,6 +4,11 @@ $('.header__burger').on('click', function(){
 	$('body').toggleClass('locked');
 });
 
+//leave__button
+$('[data-toggle="open-modal"]').on('click', function(){
+	$('.contact__right').toggleClass('show');
+});
+
 // fancybox
 $('[data-fancybox="gallery"]').fancybox({
 	buttons : [
