@@ -20,13 +20,13 @@
 					<!-- header__navigation -->
 					<nav class="header__nav nav">
 						<ul class="header__list">
-							<li class="header__item"><a href="http://link" class="header__link">Home</a></li>
-							<li class="header__item"><a href="#" class="header__link">About</a></li>
-							<li class="header__item"><a href="#" class="header__link">Gallery</a></li>
+							<li class="header__item"><a href="#" class="header__link">Home</a></li>
+							<li class="header__item"><a href="#about-us" class="header__link">About</a></li>
+							<li class="header__item"><a href="#photos" class="header__link">Gallery</a></li>
 							<li class="header__item"><a href="#" class="header__link"><img class="header__logo" src="sourceimages/logo-01.png" alt="" /></a></li>
-							<li class="header__item"><a href="#" class="header__link">FAQ</a></li>
-							<li class="header__item"><a href="#" class="header__link">Find&nbsp;us</a></li>
-							<li class="header__item"><a href="#" class="header__link">Contact</a></li>
+							<li class="header__item"><a href="#team" class="header__link">TEAM</a></li>
+							<li class="header__item"><a href="#contact" class="header__link">Contact</a></li>
+							<li class="header__item"><a href="#location" class="header__link">Find&nbsp;us</a></li>
 						</ul>
 					</nav>
 					<!-- header__burger -->
@@ -35,7 +35,7 @@
 			</div>
 		</header>
 		<main id="main" class="main">
-			<section class="about-us">
+			<section id="about-us" class="about-us">
 				<div class="container">
 					<div class="about-us__content">
 						<div class="about-us__info">
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="photos">
+			<section id="photos" class="photos">
 				<div class="container">
 					<div class="photos__content">
 						<ul class="photos__gallery gallery">
@@ -118,7 +118,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="team">
+			<section id="team" class="team">
 				<div class="container">
 					<!-- first-row -->
 					<div class="first-three-columns">
@@ -495,7 +495,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="contact">
+			<section id="contact" class="contact">
 				<div class="container">
 					<div class="contact__content">
 
@@ -603,6 +603,7 @@
 						<!-- right column -->
 						<div class="contact__right right-column">
 							<form action="" class="contact__form form">
+								<button class="contact__close" data-toggle="close-modal">&times;</button>
 								<input type="text" class="contact__input input" name="contacts" placeholder="full name">
 								<input type="email" class="contact__input input" name="contacts" placeholder="email">
 								<textarea class="contact__textarea" name="contacts" placeholder="MESSAGE"></textarea>
@@ -613,7 +614,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="location">
+			<section id="location" class="location">
 				<div class="container">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106094.85569763115!2d-118.2261492383358!3d33.80033091167983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd6f98055e867%3A0x1ab89ab9a2bb160!2z0JDQvdCw0YXQsNC50LwsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1610985113767!5m2!1sru!2sua" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>

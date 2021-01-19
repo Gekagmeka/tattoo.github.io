@@ -192,6 +192,33 @@ body{
 				font-size:13px;
 				text-transform:uppercase;
 				color:#000;
+				padding-bottom: 1px;
+				position: relative;
+
+				&::after {
+					content: '';
+					width: 100%;
+					height: 2px;
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background-color: currentcolor;
+					transform: scaleX(0);
+					//default location points (center, center)
+					transform-origin: left center;
+
+					transition: all 0.3s ease-in;
+
+				}
+
+				@include media ('>=1024px') {
+					&:hover {
+						&::after {
+							transform: scaleX(1);
+						}
+					}
+				}
 				@include media ('<600px') {
 					font-size:24px;
 					line-height:28px;
@@ -877,6 +904,7 @@ figure{
 			@include media ('<=768px') {
 				padding-left: 0;
 
+				//popup area
 				opacity: 0;
 				visibility: hidden;
 				position:fixed;
@@ -888,7 +916,7 @@ figure{
 				height:100%;
 				z-index: 10;
 				background-color:rgba(0,0,0,0.6);
-				transition: all 0.3s ease-in;
+				transition: all 0.2s ease-in;
 				//display: none; //тут нужно сделать форму по клику,
 				// которая появляется при нажатии на кнопку Contact US
 				&.show {
@@ -901,12 +929,19 @@ figure{
 						max-width:780px;
 						background-color:#fffffe;
 						margin:auto;
-						padding:40px 25px;
+						padding:25px 25px 40px;
 						border-radius:5px;
 						.contact__input {
 							padding: 10px;
 							margin-bottom: 20px;
 						}
+						.contact__close {
+							display: block;
+							margin-left: auto;
+							font-size: 40px;
+							margin-bottom: 10px;
+						}
+
 					}
 				}
 				
@@ -914,6 +949,10 @@ figure{
 
 			.contact__form {
 				font-size: 13px;
+
+				.contact__close {
+					display: none;
+				}
 
 				.contact__input {
 					padding: 20px 15px;

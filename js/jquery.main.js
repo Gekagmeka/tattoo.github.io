@@ -6,7 +6,14 @@ $('.header__burger').on('click', function(){
 
 //leave__button
 $('[data-toggle="open-modal"]').on('click', function(){
-	$('.contact__right').toggleClass('show');
+	$('.contact__right').addClass('show');
+	$('body').addClass('locked');
+	//$('.contact__right').closest('body').toggleClass('locked'); //to delete scrool during opened form popup
+});
+$('[data-toggle="close-modal"]').on('click', function(){
+	$('.contact__right').removeClass('show');
+	$('body').removeClass('locked');
+	//$('.contact__right').closest('body').toggleClass('locked'); //to delete scrool during opened form popup
 });
 
 // fancybox
