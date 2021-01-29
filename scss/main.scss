@@ -70,7 +70,9 @@ body{
 	max-width:300px;
 	width:100%;
 	padding:17px 5px 20px;
-	border:10px solid #000;
+	position: relative;
+	// border:10px solid #000;
+
 	@include media ('<=768px') {
 		padding-top:10px;
 		padding-bottom:10px;
@@ -84,6 +86,81 @@ body{
 		border:6px solid #000;
 		font-size:$btn-font-size * 0.6;
 		width:70%;
+	}
+
+	@include media ('>=1024px') {
+		//added animation for button on :hover
+		.button__top,
+		.button__bottom,
+		&::after,
+		&::before {
+			position: absolute;
+			background-color: #000;
+		}
+
+		.button__top,
+		.button__bottom {
+			width: 100%;
+			height: 10px;
+		}
+
+		.button__top {
+			right: 0;
+			top: -10px;
+			transform-origin: right center;
+			transform: scaleX(1);
+			transition: all 0.1s 0.3s ease-in;
+		}
+
+		.button__bottom {
+			left: 0;
+			bottom: -10px;
+			transform-origin: left center;
+			transform: scaleX(1);
+			transition: all 0.1s 0.1s ease-in;
+		}
+
+		&::after,
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			width: 10px;
+			top: 0;
+		}
+
+		&::before {
+			left: 0;
+			transform-origin: center top;
+			transform: scaleY(1);
+			transition: all 0.1s ease-in;
+		}
+
+		&::after {
+			right: 0;
+			transform-origin: center bottom;
+			transform: scaleY(1);
+			transition: all 0.1s 0.2s ease-in;
+		}
+
+		&:hover {
+			.button__top {
+				transition: all 0.1s ease-in;
+				transform: scaleX(0);
+			}
+			.button__bottom {
+				transition: all 0.1s 0.2s ease-in;
+				transform: scaleX(0);
+			}
+			&::after {
+				transition: all 0.1s 0.1s ease-in;
+				transform: scaleY(0);
+			}
+			&::before {
+				transition: all 0.1s 0.3s ease-in;
+				transform: scaleY(0);
+			}
+		}
 	}
 }
 .form{
@@ -213,6 +290,9 @@ body{
 				}
 
 				@include media ('>=1024px') {
+
+					font-size: 16px;
+
 					&:hover {
 						&::after {
 							transform: scaleX(1);
@@ -917,27 +997,25 @@ figure{
 				z-index: 10;
 				background-color:rgba(0,0,0,0.6);
 				transition: all 0.2s ease-in;
-				//display: none; //тут нужно сделать форму по клику,
-				// которая появляется при нажатии на кнопку Contact US
+				//form on click Leave Message (added class .show - and it works with data-attr)
 				&.show {
 					display: flex;
 					opacity: 1;
 					visibility: visible;
 					
 					.contact__form {
-						width:95%;
-						max-width:780px;
-						background-color:#fffffe;
-						margin:auto;
-						padding:25px 25px 40px;
-						border-radius:5px;
+						width: 95%;
+						max-width: 780px;
+						background-color: #fffffe;
+						margin: auto;
+						padding: 25px 25px 40px;
+						border-radius: 5px;
 						.contact__input {
 							padding: 10px;
 							margin-bottom: 20px;
 						}
 						.contact__close {
-							display: block;
-							margin-left: auto;
+							display: inline-block;
 							font-size: 40px;
 							margin-bottom: 10px;
 						}
