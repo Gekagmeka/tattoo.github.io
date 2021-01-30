@@ -573,11 +573,13 @@ body {
   width: 100%;
   padding: 17px 5px 20px;
   position: relative; }
+  @media (max-width: 1023px) {
+    .button {
+      border: 8px solid #000;
+      padding-top: 10px;
+      padding-bottom: 10px; } }
   @media (max-width: 768px) {
     .button {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 8px solid #000;
       font-size: 28.8px;
       width: 80%; } }
   @media (max-width: 480px) {
@@ -1368,38 +1370,43 @@ figure .quote__sign {
   @media (max-width: 1200px) {
     .contact__content {
       width: 94%; } }
-  @media (max-width: 1024px) {
-    .contact__content .contact__left.left-column {
-      width: 60%; } }
-  @media (max-width: 768px) {
-    .contact__content .contact__left.left-column {
-      width: 100%; } }
-  .contact__content .contact__left .contact__button {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 60px; }
-    @media (max-width: 768px) {
-      .contact__content .contact__left .contact__button {
-        margin-bottom: 30px; } }
-  .contact__content .contact__left .contact__text {
-    text-align: center;
-    padding: 0 40px;
-    margin-bottom: 60px;
-    font-size: 18px; }
+  .contact__content .contact__left {
+    margin-top: 10px; }
     @media (max-width: 1023px) {
-      .contact__content .contact__left .contact__text {
-        padding: 0 20px; } }
+      .contact__content .contact__left {
+        margin-top: 0; } }
+    @media (max-width: 1024px) {
+      .contact__content .contact__left.left-column {
+        width: 60%; } }
     @media (max-width: 768px) {
-      .contact__content .contact__left .contact__text {
-        margin-bottom: 30px; } }
-  .contact__content .contact__left .contact__social {
-    max-width: 400px;
-    margin: 0 auto; }
-  .contact__content .contact__left .leave__button {
-    display: none; }
-    @media (max-width: 768px) {
-      .contact__content .contact__left .leave__button {
-        display: block; } }
+      .contact__content .contact__left.left-column {
+        width: 100%; } }
+    .contact__content .contact__left .contact__button {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 60px; }
+      @media (max-width: 768px) {
+        .contact__content .contact__left .contact__button {
+          margin-bottom: 30px; } }
+    .contact__content .contact__left .contact__text {
+      text-align: center;
+      padding: 0 40px;
+      margin-bottom: 60px;
+      font-size: 18px; }
+      @media (max-width: 1023px) {
+        .contact__content .contact__left .contact__text {
+          padding: 0 20px; } }
+      @media (max-width: 768px) {
+        .contact__content .contact__left .contact__text {
+          margin-bottom: 30px; } }
+    .contact__content .contact__left .contact__social {
+      max-width: 400px;
+      margin: 0 auto; }
+    .contact__content .contact__left .leave__button {
+      display: none; }
+      @media (max-width: 768px) {
+        .contact__content .contact__left .leave__button {
+          display: block; } }
   .contact__content .contact__right {
     padding-left: 100px; }
     @media (max-width: 1024px) {
@@ -1435,7 +1442,9 @@ figure .quote__sign {
           display: -ms-flexbox;
           display: flex;
           opacity: 1;
-          visibility: visible; }
+          visibility: visible;
+          overflow-y: auto;
+          padding: 20px 0; }
           .contact__content .contact__right.show .contact__form {
             width: 95%;
             max-width: 780px;
