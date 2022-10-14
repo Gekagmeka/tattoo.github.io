@@ -815,7 +815,7 @@ body {
         @media (min-width: 1024px) {
           .header__nav .header__list .header__item .header__link {
             font-size: 16px; }
-            .header__nav .header__list .header__item .header__link:hover::after {
+            .header__nav .header__list .header__item .header__link:not(.logo):hover::after {
               -webkit-transform: scaleX(1);
                   -ms-transform: scaleX(1);
                       transform: scaleX(1); } }
